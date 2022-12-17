@@ -307,7 +307,9 @@ class MovableType2Blogger(object):
 
   def _FromMtTime(self, mt_time):
     try:
-      return time.strptime(mt_time, "%m/%d/%Y %I:%M:%S %p")
+      # MOD tanykazy
+      # return time.strptime(mt_time, "%m/%d/%Y %I:%M:%S %p")
+      return time.strptime(mt_time, "%m/%d/%Y %H:%M:%S")
     except ValueError:
       return time.gmtime()
 
